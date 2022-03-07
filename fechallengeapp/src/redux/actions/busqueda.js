@@ -5,8 +5,10 @@ import { SET_ERROR, SET_ITEM, SET_RESULTADO } from "../constantes";
 export const realizarBusqueda = () => async (dispatch) => {
     console.log("realizarBusqueda ");
     try {
-      const res = await axios.get('https://google.com');
+      const res = await axios.get('https://api.mercadolibre.com/sites/MLA/search?q=ipad');
       console.log("action", res);
+
+      
       if (res.data) {
         console.log("data user" + res);
         dispatch({
